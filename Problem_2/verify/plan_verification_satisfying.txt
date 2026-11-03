@@ -1,0 +1,251 @@
+type-checking move
+...action passes type checking.
+type-checking pick-drill
+...action passes type checking.
+type-checking collect-soft
+...action passes type checking.
+type-checking collect-hard
+...action passes type checking.
+type-checking deposit
+...action passes type checking.
+checking plan: plan
+plan to validate:
+
+plan size: 31
+1:
+(move rover1 base sitea)
+ 
+2:
+(collect-soft rover1 sitea rock1 bay2)
+ 
+3:
+(move rover1 sitea base)
+ 
+4:
+(deposit rover1 rock1 base bay2)
+ 
+5:
+(move rover1 base siteb)
+ 
+6:
+(collect-soft rover1 siteb rock2 bay1)
+ 
+7:
+(move rover1 siteb base)
+ 
+8:
+(deposit rover1 rock2 base bay1)
+ 
+9:
+(move rover1 base siteb)
+ 
+10:
+(move rover1 siteb sited)
+ 
+11:
+(collect-soft rover1 sited rock4 bay2)
+ 
+12:
+(move rover1 sited siteb)
+ 
+13:
+(move rover1 siteb base)
+ 
+14:
+(deposit rover1 rock4 base bay2)
+ 
+15:
+(move rover1 base sitea)
+ 
+16:
+(move rover1 sitea sitec)
+ 
+17:
+(move rover1 sitec sitee)
+ 
+18:
+(pick-drill rover1 drill1 sitee)
+ 
+19:
+(move rover1 sitee sitef)
+ 
+20:
+(collect-hard rover1 sitef rock5 bay2 drill1)
+ 
+21:
+(move rover1 sitef sitee)
+ 
+22:
+(move rover1 sitee sitec)
+ 
+23:
+(move rover1 sitec sitea)
+ 
+24:
+(move rover1 sitea base)
+ 
+25:
+(deposit rover1 rock5 base bay2)
+ 
+26:
+(move rover1 base sitea)
+ 
+27:
+(move rover1 sitea sitec)
+ 
+28:
+(collect-hard rover1 sitec rock3 bay2 drill1)
+ 
+29:
+(move rover1 sitec sitea)
+ 
+30:
+(move rover1 sitea base)
+ 
+31:
+(deposit rover1 rock3 base bay2)
+ 
+
+plan validation details
+-----------------------
+
+checking next happening (time 1)
+deleting (at rover1 base)
+adding (at rover1 sitea)
+
+checking next happening (time 2)
+deleting (sample-at rock1 sitea)
+deleting (empty rover1 bay2)
+adding (carrying rover1 rock1 bay2)
+
+checking next happening (time 3)
+deleting (at rover1 sitea)
+adding (at rover1 base)
+
+checking next happening (time 4)
+deleting (carrying rover1 rock1 bay2)
+adding (empty rover1 bay2)
+adding (sample-at rock1 base)
+
+checking next happening (time 5)
+deleting (at rover1 base)
+adding (at rover1 siteb)
+
+checking next happening (time 6)
+deleting (sample-at rock2 siteb)
+deleting (empty rover1 bay1)
+adding (carrying rover1 rock2 bay1)
+
+checking next happening (time 7)
+deleting (at rover1 siteb)
+adding (at rover1 base)
+
+checking next happening (time 8)
+deleting (carrying rover1 rock2 bay1)
+adding (empty rover1 bay1)
+adding (sample-at rock2 base)
+
+checking next happening (time 9)
+deleting (at rover1 base)
+adding (at rover1 siteb)
+
+checking next happening (time 10)
+deleting (at rover1 siteb)
+adding (at rover1 sited)
+
+checking next happening (time 11)
+deleting (sample-at rock4 sited)
+deleting (empty rover1 bay2)
+adding (carrying rover1 rock4 bay2)
+
+checking next happening (time 12)
+deleting (at rover1 sited)
+adding (at rover1 siteb)
+
+checking next happening (time 13)
+deleting (at rover1 siteb)
+adding (at rover1 base)
+
+checking next happening (time 14)
+deleting (carrying rover1 rock4 bay2)
+adding (empty rover1 bay2)
+adding (sample-at rock4 base)
+
+checking next happening (time 15)
+deleting (at rover1 base)
+adding (at rover1 sitea)
+
+checking next happening (time 16)
+deleting (at rover1 sitea)
+adding (at rover1 sitec)
+
+checking next happening (time 17)
+deleting (at rover1 sitec)
+adding (at rover1 sitee)
+
+checking next happening (time 18)
+deleting (drill-at drill1 sitee)
+adding (has-drill rover1 drill1)
+
+checking next happening (time 19)
+deleting (at rover1 sitee)
+adding (at rover1 sitef)
+
+checking next happening (time 20)
+deleting (sample-at rock5 sitef)
+deleting (empty rover1 bay2)
+adding (carrying rover1 rock5 bay2)
+
+checking next happening (time 21)
+deleting (at rover1 sitef)
+adding (at rover1 sitee)
+
+checking next happening (time 22)
+deleting (at rover1 sitee)
+adding (at rover1 sitec)
+
+checking next happening (time 23)
+deleting (at rover1 sitec)
+adding (at rover1 sitea)
+
+checking next happening (time 24)
+deleting (at rover1 sitea)
+adding (at rover1 base)
+
+checking next happening (time 25)
+deleting (carrying rover1 rock5 bay2)
+adding (empty rover1 bay2)
+adding (sample-at rock5 base)
+
+checking next happening (time 26)
+deleting (at rover1 base)
+adding (at rover1 sitea)
+
+checking next happening (time 27)
+deleting (at rover1 sitea)
+adding (at rover1 sitec)
+
+checking next happening (time 28)
+deleting (sample-at rock3 sitec)
+deleting (empty rover1 bay2)
+adding (carrying rover1 rock3 bay2)
+
+checking next happening (time 29)
+deleting (at rover1 sitec)
+adding (at rover1 sitea)
+
+checking next happening (time 30)
+deleting (at rover1 sitea)
+adding (at rover1 base)
+
+checking next happening (time 31)
+deleting (carrying rover1 rock3 bay2)
+adding (empty rover1 bay2)
+adding (sample-at rock3 base)
+plan executed successfully - checking goal
+plan valid
+final value: 31 
+
+successful plans:
+value: 31
+ plan 31
